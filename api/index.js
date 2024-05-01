@@ -27,19 +27,19 @@ app.use(cors({
     origin:'http://localhost:5173',
 }));
 
-async function uploadToS3(path,originOfFilename,mimemtype){
-    const client = new S3Client({
-        region:'us-east-1',
-        credentials:{
-            accessKey: process.env.S3_ACCESS_KEY,
-            secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-        },
-    });
-
-    
+// async function uploadToS3(path,originOfFilename,mimemtype){
+//     const client = new S3Client({
+//         region:'us-east-1',
+//         credentials:{
+//             accessKey: process.env.S3_ACCESS_KEY,
+//             secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+//         },
+//     });
 
 
-}
+
+
+// }
 
 mongoose.connect('mongodb+srv://devchakkeaditya37:Dd4nooSkcSSYLjgj@cluster0.hbqhz10.mongodb.net/');
 
