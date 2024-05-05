@@ -17,7 +17,7 @@ import PlacePage from './pages/PlacePage'
 import BookingsPage from './pages/Bookings'
 import BookingPage from './pages/BookingPage'
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 axios.defaults.withCredentials = true;
 
 
