@@ -1,3 +1,5 @@
+
+import Image from "./Image";
 export default function PlaceImg({place,index=0,className=null}){
 
     if(!place.photos?.length){
@@ -9,7 +11,7 @@ export default function PlaceImg({place,index=0,className=null}){
     }
     return(
         
-            <img className={className} src={"http://localhost:3000/uploads/"+place.photos[index]} alt="" />
+            <Image className={className} src={place.photos[index]} alt="" />
         
     )
 }

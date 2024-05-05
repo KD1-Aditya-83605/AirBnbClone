@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Image from "./Image"
 
 export default function PlaceGallery({place}){
 
@@ -28,7 +29,7 @@ export default function PlaceGallery({place}){
                 <div className="p-8 grid gap-4 ">
                 {place?.photos?.length >0 && place.photos.map(photo =>(
                 <div>
-                    <img src={"http://localhost:3000/uploads/"+photo} alt="" />
+                    <Image src={photo} alt="" />
                 </div>
             ))}
                 </div>
@@ -47,18 +48,18 @@ export default function PlaceGallery({place}){
             <div>
                {place.photos?.[0] && (
                <div>
-                 <img className="aspect-square object-cover" src={'http://localhost:3000/uploads/'+place.photos[0]} alt="" />
+                 <Image className="aspect-square object-cover" src={place.photos[0]} alt="" />
                </div>
                )}
 
             </div>
             <div className="grid ">
             {place.photos?.[1] && (
-                <img className="aspect-square object-cover" src={'http://localhost:3000/uploads/'+place.photos[1]} alt="" />
+                <Image className="aspect-square object-cover" src={place.photos[1]} alt="" />
                )}
                {place.photos?.[2] && (
                 <div className="overflow-hidden">
-                    <img className="aspect-square object-cover relative top-2"  src={'http://localhost:3000/uploads/'+place.photos[2]} alt="" />
+                    <Image className="aspect-square object-cover relative top-2"  src={place.photos[2]} alt="" />
                 </div>
                )}
             </div>

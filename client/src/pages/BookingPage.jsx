@@ -18,6 +18,9 @@ export default function BookingPage(){
                if(foundBooking){
                 setBooking(foundBooking);
             }
+            else{
+                setBooking(null)
+            }
             }
             )
 
